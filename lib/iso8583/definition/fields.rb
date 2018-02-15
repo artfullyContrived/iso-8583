@@ -1,10 +1,10 @@
 module ISO8583
   MTI_LENGTH = 4
-  BMP_LENGTH = 16
-  HDR_LENGTH = 12
+  BMP_LENGTH = 32
+  HDR_LENGTH = 4
   DTA_LENGTH = Float::INFINITY
 
-  HDR_DEFINITION = { length: HDR_LENGTH, codec: :AN,  type: :FIXED }
+  HDR_DEFINITION = { length: HDR_LENGTH, codec: :N,  type: :FIXED }
   MTI_DEFINITION = { length: MTI_LENGTH, codec: :N,   type: :FIXED }
   BMP_DEFINITION = { length: BMP_LENGTH, codec: :AN,  type: :FIXED }
   DTA_DEFINITION = { length: DTA_LENGTH, codec: :ALL, type: :VAR }
@@ -36,7 +36,7 @@ module ISO8583
     24  => { length: 3,    codec: :N,   type: :FIXED },
     25  => { length: 2,    codec: :N,   type: :FIXED },
     26  => { length: 2,    codec: :N,   type: :FIXED },
-    27  => { length: 1,    codec: :N,   type: :FIXED },
+    30  => { length: 9,    codec: :AN,  type: :FIXED },
     32  => { length: 11,   codec: :N,   type: :LLVAR },
     33  => { length: 11,   codec: :N,   type: :LLVAR },
     34  => { length: 28,   codec: :NS,  type: :LLVAR },
@@ -46,7 +46,7 @@ module ISO8583
     38  => { length: 6,    codec: :AN,  type: :FIXED },
     39  => { length: 2,    codec: :AN,  type: :FIXED },
     40  => { length: 3,    codec: :AN,  type: :FIXED },
-    41  => { length: 16,   codec: :ANS, type: :FIXED },
+    41  => { length: 8,    codec: :ANS, type: :FIXED },
     42  => { length: 15,   codec: :ANS, type: :FIXED },
     43  => { length: 40,   codec: :ANS, type: :FIXED },
     44  => { length: 25,   codec: :AN,  type: :LLVAR },

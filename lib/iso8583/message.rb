@@ -93,7 +93,7 @@ module ISO8583
     end
 
     def parse(message)
-      @header.encode(message.slice!(0, HDR_LENGTH)) if message.start_with?('ISO')
+      @header.encode(message.slice!(0, HDR_LENGTH))
       @mti.encode(message.slice!(0, MTI_LENGTH))
       @bitmap.encode(message.slice!(0, BMP_LENGTH))
       @data.encode(message)
