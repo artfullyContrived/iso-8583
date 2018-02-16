@@ -31,8 +31,7 @@ module ISO8583
   VAR.extractor = VAR_EXTRACTOR
 
 
-
-  [:LVAR, :LLVAR, :LLLVAR].each_with_index do |type, index|
+  [:LVAR, :LLVAR, :LLLVAR, :LLLLVAR].each_with_index do |type, index|
     type  = const_set(type, FieldType.new)
     index += 1
 
