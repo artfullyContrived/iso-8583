@@ -46,7 +46,7 @@ module ISO8583
     38  => { length: 6,    codec: :AN,  type: :FIXED },
     39  => { length: 2,    codec: :AN,  type: :FIXED },
     40  => { length: 3,    codec: :AN,  type: :FIXED },
-    41  => { length: 12,    codec: :ANS, type: :FIXED },
+    41  => { length: 8,    codec: :ANS, type: :FIXED },
     42  => { length: 15,   codec: :ANS, type: :FIXED },
     43  => { length: 40,   codec: :ANS, type: :FIXED },
     44  => { length: 25,   codec: :AN,  type: :LLVAR },
